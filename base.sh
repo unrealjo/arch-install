@@ -1,4 +1,4 @@
-#!/binyy/bash
+#!/bin/bash
 
 # set system time
 ln -sf /usr/share/zoneinfo/Africa/Casablanca /etc/localtime
@@ -22,9 +22,9 @@ systemctl enable iwd dhcpcd
 echo "Adding linus user " && useradd -m -G wheel,storage linus 
 echo "Installing grub"
 grub-install /dev/sda
-grub-mkconfig /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 echo "Last step done"
-echo "Moving arch to /home/linus" mv ./arch-install /home/linus
+echo "Moving arch to /home/linus" && chmown -r linus ./arch-install ; mv ./arch-install /home/linus
 
 
 

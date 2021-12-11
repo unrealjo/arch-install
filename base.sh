@@ -24,7 +24,8 @@ echo "Installing grub"
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 echo "Last step done"
-echo "Moving arch to /home/linus" && chmown -r linus ./arch-install ; mv ./arch-install /home/linus
+echo "Change root password"; passwd
+echo "Change linus password"; passwd linus
 
 
 

@@ -1,29 +1,22 @@
  #!/bin/bash
  # Xorg
-sudo pacman -S --noconfirm linux-zen base-devel linux-zen-headers linux-lts xorg xorg-xinit xorg-xrandr xorg-xkill 
-# Drivers
-sudo pacman -S --noconfirm intel-ucode
+sudo pacman -S --noconfirm --needed base-devel rust xorg-server xorg-xinit xorg-xrandr xorg-xkill intel-ucode
  # Audio and video
-sudo pacman -S --noconfirm  pulseaudio pavucontrol  mpv brightnessctl
- # Appearance
-sudo pacman -S --noconfirm lxappearance i3-gaps feh
+sudo pacman -S --noconfirm --needed  pulseaudio pavucontrol  mpv mpd ncmpcpp mpc brightnessctl lxappearance i3-gaps feh pamixer
  # Archiver
-sudo pacman -S --noconfirm pcmanfm xarchiver unrar unzip p7zip zip 
-# Pdf reader
-sudo pacman -S --noconfirm zathura zathura-pdf-mupdf     
+sudo pacman -S --noconfirm --needed pcmanfm xarchiver unrar unzip p7zip zip zathura zathura-pdf-mupdf ntfs-3g exfat-utils   
 # Additional
-sudo pacman -S --noconfirm rofi libnotify dunst neofetch acpi htop usbutils lxsession
-# Dev
-sudo pacman -S --noconfirm  jdk-openjdk nodejs npm android-tools
+sudo pacman -S --noconfirm --needed rofi libnotify dunst neofetch acpi htop usbutils lxsession jdk-openjdk nodejs npm android-tools
 # Terminal
-sudo pacman -S --noconfirm calcurse exa bat kitty bash-completion zsh zsh-syntax-highlighting zsh-autosuggestions
+sudo pacman -S --noconfirm --needed starship exa bat kitty bash-completion zsh zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting
 # Functionality
-sudo pacman -S  --noconfirm exfat-utils  fuse gvfs gvfs-mtp
-sudo pacman -S --noconfirm qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat
+sudo pacman -S  --noconfirm --needed exfat-utils  fuse gvfs gvfs-mtp
+sudo pacman -S --noconfirm --needed qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat
 sudo pacman -S ebtables iptables
 sudo useradd -G libvirt linus 
 newgrp libvirt
 sudo systemctl enable --now virtqemud
 sudo systemctl enable --now virtstoraged
 sudo systemctl enable --now virtnetworkd
+echo "exec i3" > .xinitrc
                   

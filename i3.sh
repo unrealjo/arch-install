@@ -3,6 +3,8 @@
 sudo pacman -S --noconfirm --needed base-devel rust xorg-server xorg-xinit xorg-xrandr xorg-xkill intel-ucode
  # Audio and video
 sudo pacman -S --noconfirm --needed  pulseaudio pavucontrol  mpv mpd ncmpcpp mpc brightnessctl lxappearance i3-gaps feh pamixer
+# Tools 
+sudo pacman -S --noconfirm --needed xclip gcolor3
  # Archiver
 sudo pacman -S --noconfirm --needed pcmanfm xarchiver unrar unzip p7zip zip zathura zathura-pdf-mupdf ntfs-3g exfat-utils   
 # Additional

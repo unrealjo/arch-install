@@ -4,7 +4,7 @@ sudo pacman -S --noconfirm --needed base-devel rust xorg-server xorg-xinit xorg-
  # Audio and video
 sudo pacman -S --noconfirm --needed  pulseaudio mpv mpd mpc brightnessctl lxappearance i3-gaps feh pamixer
 # Tools 
-sudo pacman -S --noconfirm --needed xclip gcolor3  flameshot firefox
+sudo pacman -S --noconfirm --needed xclip gcolor3  flameshot 
  # Archiver
 sudo pacman -S --noconfirm --needed pcmanfm xarchiver unrar unzip p7zip zip zathura zathura-pdf-mupdf ntfs-3g exfat-utils   
 # Additional

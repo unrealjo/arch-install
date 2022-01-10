@@ -19,7 +19,6 @@ usermod -a -G libvirt linus
 systemctl enable --now virtqemud
 systemctl enable --now virtstoraged
 systemctl enable --now virtnetworkd
-echo "exec i3" > .xinitrc
 echo "Chaning login shell"
 usermod --shell /bin/fish linus
                   

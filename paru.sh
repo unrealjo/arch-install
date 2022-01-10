@@ -5,4 +5,4 @@ if [[ ! -e /bin/paru ]] ; then
     makepkg -si
     sleep 2 ;cd;
 fi
-paru -S polybar picom-ibhagwan-git brave-bin
+paru -S find-the-command-git

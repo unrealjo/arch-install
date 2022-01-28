@@ -8,7 +8,7 @@ pacman -S --noconfirm --needed nodejs npm android-tools git
 # Firmware
 pacman -S --noconfirm --needed linux-firmware intel-ucode 
 # Newtork
-pacman -S --noconfirm --needed iptables-nft dnsmasq bridge-utils openbsd-netcat # Most of the needed for libvirt 
+pacman -S --needed iptables-nft dnsmasq bridge-utils openbsd-netcat # Most of the needed for libvirt 
 # Audio and video
 pacman -S --noconfirm --needed pulseaudio mpv mpd mpc brightnessctl pamixer
 # Wm

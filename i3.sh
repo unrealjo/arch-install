@@ -4,7 +4,7 @@ pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-xrandr xorg-xkill  # 
 # Building 
 pacman -S --noconfirm --needed base-devel
 # Development
-pacman -S --noconfirm --needed nodejs npm android-tools git 
+pacman -S --noconfirm --needed nodejs npm 
 # Firmware
 pacman -S --noconfirm --needed intel-ucode 
 # Newtork

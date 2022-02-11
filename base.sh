@@ -24,11 +24,11 @@ cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 reflector -c "US" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
 
 echo "installing essential packages"
-pacman -S --noconfirm grub iw iwd netwokmanager sudo
-echo "set iwd as backend for netwokmanager"
+pacman -S --noconfirm grub iw iwd networkmanager sudo
+echo "set iwd as backend for networkmanager"
 echo -e "[device]\nwifi.backend=iwd" >> /etc/NetworkManager/NetworkManager.conf
 sleep 1;
-systemctl enable iwd NetwokManager
+systemctl enable iwd NetworkManager
 echo "Adding linus user " && useradd -m -G wheel,storage,video linus 
 echo "Installing grub"
 grub-install /dev/sda

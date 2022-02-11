@@ -10,7 +10,7 @@ pacman -S --noconfirm --needed intel-ucode
 # Audio and video
 pacman -S --noconfirm --needed pulseaudio vlc  mpd mpc brightnessctl pamixer # Bye mpv , welcome vlc
 # Wm
-pacman -S --noconfirm --needed i3-gaps i3loack spectrwm tint2 # i3 just in case
+pacman -S --noconfirm --needed i3-gaps i3lock spectrwm tint2 # i3 just in case
 # Appearance 
 pacman -S --noconfirm --needed feh lxappearance kvantum qt5ct  # qt and gtk theming 
 # Tools

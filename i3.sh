@@ -4,7 +4,7 @@ pacman -S --needed iptables-nft dnsmasq bridge-utils openbsd-netcat # Most of th
 # Xorg
 pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-xrandr xorg-xkill  # Dispaly Server
 # Development
-pacman -S --noconfirm --needed nodejs npm 
+pacman -S --noconfirm --needed nodejs npm base-devl
 # Firmware
 pacman -S --noconfirm --needed intel-ucode 
 # Audio and video

@@ -24,8 +24,11 @@ cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 reflector -c "US" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
 
 echo "installing essential packages"
-pacman -S --noconfirm grub iw iwd dhcpcd sudo
-systemctl enable iwd dhcpcd
+pacman -S --noconfirm grub iw iwd netwokmanager sudo
+echo "set iwd as backend for netwokmanager"
+echo -e "[device]\nwifi.backend=iwd" >> /etc/NetworkManager/NetworkManager.conf
+sleep 1;
+systemctl enable iwd NetwokManager
 echo "Adding linus user " && useradd -m -G wheel,storage,video linus 
 echo "Installing grub"
 grub-install /dev/sda
@@ -33,7 +36,12 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo "Last step done"
 echo "Change root password"; passwd
 echo "Change linus password"; passwd linus
-sed -i '82s/.//' /etc/sudoers
+sleep 1;
 echo "Making wheel able to use sudo as root"
+sed -i '82s/.//' /etc/sudoers
+echo "Enabling "fr" keyboard layout for lightdm"
+cat ./keyboard.conf > /etc/X11/xorg.conf.d/00-keyboard.conf
+echo "Enable qt5ct vars"
+echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> /etc/environment
 
 
